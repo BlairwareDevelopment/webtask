@@ -1,4 +1,11 @@
+
+"use latest";
+
+import util from "util";
+
 module.exports = function(ctx, cb) {
-  console.log("Webhook invoked");
-  cb(null, { hello: ctx.data.name || 'Anonymous' });
+  //console.log("Webhook invoked");
+ // cb(null, { hello: ctx.data.name || 'Anonymous' });
+ console.log(util.inspect(ctx.body, {depth:null}));
+ cb();
 };
